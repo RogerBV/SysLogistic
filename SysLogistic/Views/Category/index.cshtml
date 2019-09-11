@@ -1,18 +1,21 @@
-﻿<script type="text/javascript" src="~/Scripts/jquery-3.3.1.js"></script>
-<script type="text/javascript" src="~/Scripts/vue.js"></script>
-<script type="text/javascript" src="~/Scripts/bootstrap.js"></script>
-<script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
-
-<link type="text/css" href="~/Content/bootstrap-theme.css" />
-<script type="text/javascript" src="~/Scripts/category.js"></script>
-<html>
+﻿<html>
+<head></head>
 <body>
-    <div id="app" class="row">
-        <div class="col-md-4">
+    <form>
+        <div id="app">
             <div class="form-group">
-                <input type="text" class="form-control" v-model="txtName" id="txtName" name="txtName" />
+                <div class="col-md-12">
+                    <label for="txtName">Name</label>
+                    <input type="text" class="form-control" v-model="txtName" id="txtName" name="txtName" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <label for="txtPrecio">Precio</label>
+                    <input type="text" class="form-control" v-model="txtPrecio" id="txtPrecio" name="txtPrecio" />
+                </div>
             </div>
         </div>
-    </div>
+    </form>
 </body>
 </html>
