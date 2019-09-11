@@ -2,6 +2,11 @@
     el: '#app',
     data: {
         txtName: '',
-        txtPrecio:0
+        txtDescription: '',
+        txtPrecio:0.00
+    }, methods: {
+        SaveCategory: function (event) {
+            alert(txtName);
+        }
     }
 });
