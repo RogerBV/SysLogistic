@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28107.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SysLogistic", "SysLogistic\SysLogistic.csproj", "{F2D168A7-C2F4-43D5-A9C8-1CEB1810682B}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestructure.DataMapping", "Infraestructure.DataMapping\Infraestructure.DataMapping.csproj", "{56856D59-92B5-460F-A5CC-DCE449E31726}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Implementation.SQL", "Services.Implementation.SQL\Services.Implementation.SQL.csproj", "{49D76D28-C1FB-4560-B6E5-5255590E7DC1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{8593C85A-AAE5-43DF-AAEA-E8FF04F0E303}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +58,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{F2D168A7-C2F4-43D5-A9C8-1CEB1810682B} = {8593C85A-AAE5-43DF-AAEA-E8FF04F0E303}
 		{6B72384B-295B-4282-B063-CC9D24444477} = {F87C0064-7131-49B0-BB34-D3560C1AC993}
 		{FE176A5A-8FC8-4714-B1C4-FCCDF5AC1DD1} = {82E998B5-997D-450E-9F39-AB48CCD464D7}
 		{7D3FC3C7-83FC-4ED9-9FED-74A5EF407467} = {42A3EB2F-99C1-4629-AAD3-2736CE99B6FE}

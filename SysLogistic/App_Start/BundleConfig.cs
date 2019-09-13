@@ -15,10 +15,13 @@ namespace SysLogistic
                         "~/Scripts/jquery.validate*"));
 
             bundles.Add(new ScriptBundle("~/bundles/vue").Include(
-                "~/Scripts/vue.js"));
+                "~/Scripts/Vue/vue.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/category").Include(
-                "~/Scripts/category.js"));
+            bundles.Add(new ScriptBundle("~/bundles/axios").Include(
+                "~/Scripts/Vue/axios.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/vue/category").Include(
+                "~/Scripts/Vue/category.js"));
 
             // Utilice la versión de desarrollo de Modernizr para desarrollar y obtener información. De este modo, estará
             // para la producción, use la herramienta de compilación disponible en https://modernizr.com para seleccionar solo las pruebas que necesite.
