@@ -2,26 +2,56 @@
 <head></head>
 <body>
     <div id="app">
-        <div class="form-group">
-            <div class="col-md-12">
-                <label for="txtName">Name</label>
-                <input type="text" class="form-control" v-model="txtName" id="txtName" name="txtName" />
-            </div>
+        <div class="row">
+            <input type="button" value="New" class="btn btn-primary" data-toggle="modal" data-target="#modalCategory" />
         </div>
-        <div class="form-group">
-            <div class="col-md-12">
-                <label for="txtDescription">Description</label>
-                <textarea class="form-control" v-model="txtDescription" id="txtDescription" name="txtDescription"></textarea>
+
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="row in categories">
+                        <td>{{row.Id}}</td>
+                        <td>{{row.Name}}</td>
+                    </tr>
+                </tbody>
+            </table>
+         </div>
+
+
+            <div class="modal fade" id="modalCategory" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Category</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <label for="txtName">Name</label>
+                            <input type="text" class="form-control" v-model="txtName" id="txtName" name="txtName" />
+                            <label for="txtDescription">Description</label>
+                            <input type="text" class="form-control" v-model="txtDescription" id="txtDescription" name="txtDescription" />
+                        </div>
+                        <div class="modal-footer">
+                            <button id="btnSave" name="btnSave" class="btn btn-primary" v-on:click="SaveCategory">Save</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
-        <div class="form-group">
-            <div class="col-md-12">
-                <button id="btnSave" name="btnSave" class="btn btn-primary" v-on:click="SaveCategory">Save</button>
-            </div>
-        </div>
-    </div>
-    @Scripts.Render("~/bundles/vue")
-    @Scripts.Render("~/bundles/axios")
-    @Scripts.Render("~/bundles/vue/category")
+
+        @Scripts.Render("~/bundles/bootstrap")
+        @Scripts.Render("~/bundles/vue")
+        @Scripts.Render("~/bundles/axios")
+        @Scripts.Render("~/bundles/vue/category")
 </body>
 </html>

@@ -21,10 +21,19 @@ namespace SysLogistic.Controllers
         {
             return View();
         }
-        [HttpGet]
+        [HttpPost]
         public RegisteredCategory Create(CreateCategory newCategory)
         {
+            newCategory.CreationDate = DateTime.Now;
             return this._categoryService.Create(newCategory);
+        }
+
+        [HttpGet]
+        public JsonResult List()
+        {
+            //return lista;
+            return Json(this._categoryService.List());
+
         }
     }
 }

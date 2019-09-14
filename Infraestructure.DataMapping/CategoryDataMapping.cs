@@ -16,6 +16,8 @@ namespace Infraestructure.DataMapping
             return new Category()
             {
                 Name = newCategory.Name
+                , Description = newCategory.Description
+                , CreationDate = newCategory.CreationDate
             };
         }
         public static RegisteredCategory toDTO(this Category categoryOnDb)

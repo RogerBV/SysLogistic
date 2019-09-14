@@ -10,18 +10,26 @@ var app = new Vue({
     data: {
         txtName: '',
         txtDescription: ''
+        ,categories: []
     }, methods: {
         SaveCategory: function (event) {
-            
-            eCategory.Name = this.txtName
-            eCategory.Description = this.txtDescription
-            const oCategory = JSON.stringify(eCategory);
-            //alert("/Category/create?newCategory='" + oCategory+"'");
-
-            axios.get("/Category/create?newCategory='" + oCategory + "'")
+            axios.post("/Category/create", { Description: this.txtDescription, Name: this.txtName })
                 .then(response => {
                     //this.info = response.data.bpi
                 });
         }
+        , List: function (event) {
+            axios.get("/Category/List")
+                .then(function(response) {
+                    //const lista = JSON.stringify(response.data);
+                    console.log(response);
+                    
+
+                    this.categories = JSON.stringify(response.data);
+                });
+        }
+        
+    }, mounted() {
+        this.List();
     }
 });
