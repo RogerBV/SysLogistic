@@ -15,7 +15,9 @@ var app = new Vue({
         SaveCategory: function (event) {
             axios.post("/Category/create", { Description: this.txtDescription, Name: this.txtName })
                 .then(response => {
-                    //this.info = response.data.bpi
+                    alert("Registro Exitoso");
+                    $('#modalCategory').modal('toggle');
+                    this.List();
                 });
         }
         , List: function (event) {
@@ -23,12 +25,6 @@ var app = new Vue({
                 {
                     dataType: 'json'
                 })
-                /*.then(function (response) {
-                    
-                    console.log(JSON.stringify(response.data.data));
-                    
-                    this.categories = JSON.stringify(response.data.data);
-                });*/
                 .then(response => this.categories = response.data.data);
         }
         

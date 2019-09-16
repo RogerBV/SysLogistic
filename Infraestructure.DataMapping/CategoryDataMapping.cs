@@ -27,6 +27,8 @@ namespace Infraestructure.DataMapping
                 Id = categoryOnDb.Id
                 ,
                 Name = categoryOnDb.Name
+                ,
+                Description = categoryOnDb.Description
             };
         }
         public static Category ToEntity(this UpdateCategory updateCategory)
