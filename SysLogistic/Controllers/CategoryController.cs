@@ -29,11 +29,11 @@ namespace SysLogistic.Controllers
         }
 
         [HttpGet]
-        public JsonResult List()
+        public ActionResult List()
         {
-            //return lista;
-            return Json(this._categoryService.List());
+            List<RegisteredCategory> list = this._categoryService.List();
 
+            return Json(new { count = list.Count,data = list }, JsonRequestBehavior.AllowGet);
         }
     }
 }

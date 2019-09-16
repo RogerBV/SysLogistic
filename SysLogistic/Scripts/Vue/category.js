@@ -19,14 +19,17 @@ var app = new Vue({
                 });
         }
         , List: function (event) {
-            axios.get("/Category/List")
-                .then(function(response) {
-                    //const lista = JSON.stringify(response.data);
-                    console.log(response);
+            axios.get("/Category/List",
+                {
+                    dataType: 'json'
+                })
+                /*.then(function (response) {
                     
-
-                    this.categories = JSON.stringify(response.data);
-                });
+                    console.log(JSON.stringify(response.data.data));
+                    
+                    this.categories = JSON.stringify(response.data.data);
+                });*/
+                .then(response => this.categories = response.data.data);
         }
         
     }, mounted() {
