@@ -23,6 +23,9 @@ namespace SysLogistic
             bundles.Add(new ScriptBundle("~/bundles/vue/category").Include(
                 "~/Scripts/Vue/category.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/vue/product").Include(
+                "~/Scripts/Vue/Product.js"));
+
             // Utilice la versión de desarrollo de Modernizr para desarrollar y obtener información. De este modo, estará
             // para la producción, use la herramienta de compilación disponible en https://modernizr.com para seleccionar solo las pruebas que necesite.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(

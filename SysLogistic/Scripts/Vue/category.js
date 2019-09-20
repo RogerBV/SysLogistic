@@ -1,11 +1,4 @@
-﻿const category = {
-    Name: ''
-    ,Description: ''
-}
-
-const eCategory = Object.create(category);
-
-var app = new Vue({
+﻿var app = new Vue({
     el: '#app',
     data: {
         txtName: '',

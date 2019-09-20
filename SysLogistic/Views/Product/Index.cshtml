@@ -1,7 +1,64 @@
-﻿
-@{
-    ViewBag.Title = "Index";
-}
-
-<h2>Index</h2>
+﻿<html>
+<head></head>
+<body>
+    <div id="appProduct">
+        <div class="row">
+            <input type="button" value="New" class="btn btn-primary" data-toggle="modal" data-target="#modalProduct" />
+        </div>
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="product in products">
+                        <td>{{product.Id}}</td>
+                        <td>{{product.Name}}</td>
+                        <td>{{product.categoryName}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="modal fade" id="modalProduct" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Product</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <label for="txtName">Name</label>
+                        <input type="text" class="form-control" v-model="txtName" id="txtName" name="txtName" />
+                        <label for="txtDescription">Description</label>
+                        <input type="text" class="form-control" v-model="txtDescription" id="txtDescription" name="txtDescription" />
+                        <label for="cboCategory">Category</label>
+                        <select class="form-control" id="cboCategory" name="cboCategory" v-model="cboCategory" >
+                            <option>Select here</option>
+                            <option v-for="category in categories"
+                                    v-bind:value="category.Id"
+                                    >{{category.Name}}</option>
+                        </select>
+                        <label for="txtPrice">Price</label>
+                        <input type="number" class="form-control" v-model.number="txtPrice" id="txtPrice" name="txtPrice" />
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnSave" name="btnSave" class="btn btn-primary" v-on:click="SaveProduct">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/vue")
+    @Scripts.Render("~/bundles/axios")
+    @Scripts.Render("~/bundles/vue/product")
+</body>
+</html>
 

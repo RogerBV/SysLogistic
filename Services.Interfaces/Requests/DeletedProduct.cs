@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Services.Interfaces.Requests
 {
-    public class CreateCategory
+    public class DeletedProduct
     {
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public DateTime CreationDate { get; set; }
+        public int Id { get; set; }
     }
 }
