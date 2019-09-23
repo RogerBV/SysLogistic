@@ -16,7 +16,7 @@ namespace Infraestructure.DataMapping
             {
                 Name = newProduct.Name
                 , Description = newProduct.Description
-                
+                , CategoryId = newProduct.CategoryId
                 , Price = newProduct.Price
                 , CreationDate = newProduct.CreationDate
             };
@@ -25,11 +25,11 @@ namespace Infraestructure.DataMapping
         {
             return new RegisteredProduct()
             {
-                 Id = productOnDb.Id
-                ,Name = productOnDb.Name
-                ,Description = productOnDb.Description
-                ,Price = productOnDb.Price
-                ,categoryName = productOnDb.category.Name
+                Id = productOnDb.Id
+                , Name = productOnDb.Name
+                , Description = productOnDb.Description
+                , Price = productOnDb.Price
+                , categoryName = productOnDb.Category != null ? productOnDb.Category.Name : ""
             };
         }
     }

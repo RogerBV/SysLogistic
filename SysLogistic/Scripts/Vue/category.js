@@ -8,8 +8,8 @@
         SaveCategory: function (event) {
             axios.post("/Category/create", { Description: this.txtDescription, Name: this.txtName })
                 .then(response => {
-                    alert("Registro Exitoso");
-                    $('#modalCategory').modal('toggle');
+                    //alert("Registro Exitoso");
+                    $('#modalCategory').modal('hide');
                     this.List();
                 });
         }

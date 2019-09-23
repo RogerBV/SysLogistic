@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Domain.Entities.Common;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace Domain.Entities
 {
     public class Product : BaseEntity
@@ -11,7 +12,11 @@ namespace Domain.Entities
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
-        public Category category { get; set; }
+
+        public int CategoryId { get; set; }
+
+        [ForeignKey("CategoryId")]
+        public Category Category { get; set; }
         
     }
 }

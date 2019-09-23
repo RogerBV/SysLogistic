@@ -22,8 +22,8 @@
         SaveProduct: function (event) {
             axios.post("/Product/create", { Description: this.txtDescription, Name: this.txtName, Price: this.txtPrice, CategoryId: this.cboCategory })
                         .then(response => {
-                            alert("Registro Exitoso");
-                            $('#modalProduct').modal('toggle');
+                            //alert("Registro Exitoso");
+                            $('#modalProduct').modal('hide');
                             this.List();
                         });
                 }
