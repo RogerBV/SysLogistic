@@ -25,6 +25,7 @@ namespace Infraestructure.DataMapping
         {
             return new RegisteredWarehouse()
             {
+                Id = warehouseOnDb.Id,
                 Name = warehouseOnDb.Name
                 ,Description = warehouseOnDb.Description
                 ,Length = warehouseOnDb.Lenght
