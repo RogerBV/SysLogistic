@@ -51,6 +51,7 @@
     <Compile Include="CategoryDataMapping.cs" />
     <Compile Include="ProductDataMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WarehouseDataMapping.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domain.Entities\Domain.Entities.csproj">

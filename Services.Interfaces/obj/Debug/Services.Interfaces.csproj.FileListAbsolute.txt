@@ -9,3 +9,4 @@ C:\Users\roger\source\repos\SysLogistic\Services.Interfaces\obj\Debug\Services.I
 C:\Users\roger\source\repos\SysLogistic\Services.Interfaces\obj\Debug\Services.Interfaces.csproj.CopyComplete
 C:\Users\roger\source\repos\SysLogistic\Services.Interfaces\obj\Debug\Services.Interfaces.dll
 C:\Users\roger\source\repos\SysLogistic\Services.Interfaces\obj\Debug\Services.Interfaces.pdb
+C:\Users\roger\source\repos\SysLogistic\Services.Interfaces\obj\Debug\Services.Interfaces.csprojAssemblyReference.cache
