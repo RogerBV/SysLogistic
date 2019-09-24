@@ -16,6 +16,7 @@ namespace Infraestructure.DataMapping
             {
                 Name = newWarehouse.Name
                 , Description = newWarehouse.Description
+                , CreationDate = newWarehouse.CreationDate
                 , Lenght = 0
                 , Latitude = 0
             };

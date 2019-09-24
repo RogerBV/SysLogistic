@@ -33,7 +33,7 @@ namespace SysLogistic.Controllers
         public ActionResult List()
         {
             List<RegisteredWarehouse> list = this._warehouseService.List();
-            return Json(new { count = list.Count }, JsonRequestBehavior.AllowGet);
+            return Json(new { count = list.Count, data = list }, JsonRequestBehavior.AllowGet);
         }
         
     }

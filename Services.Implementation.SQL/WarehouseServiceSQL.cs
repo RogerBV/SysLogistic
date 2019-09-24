@@ -14,7 +14,13 @@ namespace Services.Implementation.SQL
     {
         public RegisteredWarehouse Create(CreateWarehouse newRegistry)
         {
-            throw new NotImplementedException();
+            using (LogisticDataContext logisticDataContext = new LogisticDataContext())
+            {
+                var newWareHouse = newRegistry.ToEntity();
+                logisticDataContext.Warehouses.Add(newWareHouse);
+                logisticDataContext.SaveChanges();
+                return newWareHouse.toDTO();
+            }
         }
 
         public RegisteredWarehouse Delete(DeletedWarehouse Id)
