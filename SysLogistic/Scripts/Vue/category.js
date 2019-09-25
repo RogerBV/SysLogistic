@@ -19,6 +19,8 @@
                     dataType: 'json'
                 })
                 .then(response => this.categories = response.data.data);
+        }, AlertCategory: function (event) {
+            console.log(event);
         }
         
     }, mounted() {
