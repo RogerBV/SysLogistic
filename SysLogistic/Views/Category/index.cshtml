@@ -24,7 +24,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="row in categories" v-on:click="AlertCategory( row )">
+                        <tr v-for="row in categories" v-on:click="FindCategory( row )">
                             <td> {{row.Id}} </td>
                             <td> {{row.Name}} </td>
                             <td> {{row.Description}} </td>
@@ -51,7 +51,7 @@
                         <input type="text" class="form-control" v-model="txtDescription" id="txtDescription" name="txtDescription" />
                     </div>
                     <div class="modal-footer">
-                        <button id="btnSave" name="btnSave" class="btn btn-primary" v-on:click="SaveCategory">Save</button>
+                        <button id="btnSave" name="btnSave" class="btn btn-primary" v-on:click="Save">Save</button>
                     </div>
                 </div>
             </div>

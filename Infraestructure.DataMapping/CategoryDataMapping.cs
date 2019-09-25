@@ -38,6 +38,7 @@ namespace Infraestructure.DataMapping
                 Id = updateCategory.Id
                 ,
                 Name = updateCategory.Name
+                , Description = updateCategory.Description
             };
         }
     }

@@ -28,6 +28,12 @@ namespace SysLogistic.Controllers
             return this._categoryService.Create(newCategory);
         }
 
+        [HttpPut]
+        public RegisteredCategory Update(UpdateCategory updateCategory)
+        {
+            return this._categoryService.Update(updateCategory);
+        }
+
         [HttpGet]
         public ActionResult List()
         {
