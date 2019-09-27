@@ -22,11 +22,11 @@
                 });
         }
         , UpdateCategory: function (event) {
-            axios.put("/Category/Update", { Name: this.txtName, Description: this.txtDescription, Id : this.Id })
+            axios.post("/Category/Update", { Name: this.txtName, Description: this.txtDescription, Id : this.Id })
                 .then(response => {
-                    //$('#modalCategory').modal('hide');
-                    //this.List();
-                    //this.Id = 0;
+                    $('#modalCategory').modal('hide');
+                    this.List();
+                    this.Id = 0;
                 });
         }
         , List: function (event) {

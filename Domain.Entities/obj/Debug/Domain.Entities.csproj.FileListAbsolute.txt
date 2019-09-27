@@ -5,6 +5,7 @@ C:\Users\roger\source\repos\SysLogistic\Domain.Entities\bin\Debug\EntityFramewor
 C:\Users\roger\source\repos\SysLogistic\Domain.Entities\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\roger\source\repos\SysLogistic\Domain.Entities\bin\Debug\EntityFramework.xml
 C:\Users\roger\source\repos\SysLogistic\Domain.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\roger\source\repos\SysLogistic\Domain.Entities\obj\Debug\Domain.Entities.csprojAssemblyReference.cache
 C:\Users\roger\source\repos\SysLogistic\Domain.Entities\obj\Debug\Domain.Entities.csproj.CoreCompileInputs.cache
 C:\Users\roger\source\repos\SysLogistic\Domain.Entities\obj\Debug\Domain.Entities.csproj.CopyComplete
 C:\Users\roger\source\repos\SysLogistic\Domain.Entities\obj\Debug\Domain.Entities.dll

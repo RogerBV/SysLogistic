@@ -28,7 +28,7 @@ namespace SysLogistic.Controllers
             return this._categoryService.Create(newCategory);
         }
 
-        [HttpPut]
+        [HttpPost]
         public RegisteredCategory Update(UpdateCategory updateCategory)
         {
             return this._categoryService.Update(updateCategory);
