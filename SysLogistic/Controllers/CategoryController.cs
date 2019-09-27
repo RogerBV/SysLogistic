@@ -31,6 +31,7 @@ namespace SysLogistic.Controllers
         [HttpPost]
         public RegisteredCategory Update(UpdateCategory updateCategory)
         {
+            updateCategory.CreationDate = DateTime.Now;
             return this._categoryService.Update(updateCategory);
         }
 

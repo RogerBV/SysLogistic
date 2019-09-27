@@ -36,9 +36,9 @@ namespace Infraestructure.DataMapping
             return new Category()
             {
                 Id = updateCategory.Id
-                ,
-                Name = updateCategory.Name
-                , Description = updateCategory.Description
+                ,Name = updateCategory.Name
+                ,Description = updateCategory.Description
+                ,CreationDate = updateCategory.CreationDate
             };
         }
     }
