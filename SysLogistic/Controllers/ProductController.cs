@@ -30,6 +30,13 @@ namespace SysLogistic.Controllers
             newProduct.CreationDate = DateTime.Now;
             return this._productService.Create(newProduct);
         }
+        [HttpPost]
+        public RegisteredProduct Update(UpdateProduct registeredProduct)
+        {
+            registeredProduct.CreateDate = DateTime.Now;
+            return this._productService.Update(registeredProduct);
+        }
+
         [HttpGet]
         public ActionResult ListCategories()
         {

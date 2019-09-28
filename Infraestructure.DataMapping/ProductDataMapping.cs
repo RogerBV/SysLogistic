@@ -32,5 +32,17 @@ namespace Infraestructure.DataMapping
                 , categoryName = productOnDb.Category != null ? productOnDb.Category.Name : ""
             };
         }
+        public static Product ToEntity(this UpdateCategory updateProduct)
+        {
+            return new Product()
+            {
+                Name = updateProduct.Name
+                ,
+                Description = updateProduct.Description
+                ,
+                Price = updateProduct.Price
+                ,CategoryId = updateProduct.CategoryId
+            };
+        }
     }
 }

@@ -7,7 +7,7 @@
         ,categories: []
     }, methods: {
         Save: function (event) {
-            if (event.Id == 0) {
+            if (this.Id == 0) {
                 this.SaveCategory(event);
             } else {
                 this.UpdateCategory(event);
@@ -18,7 +18,7 @@
                 .then(response => {
                     $('#modalCategory').modal('hide');
                     this.List();
-                    this.Id = 0;
+                    this.CleanForm();
                 });
         }
         , UpdateCategory: function (event) {
@@ -26,7 +26,8 @@
                 .then(response => {
                     $('#modalCategory').modal('hide');
                     this.List();
-                    this.Id = 0;
+                    this.CleanForm();
+
                 });
         }
         , List: function (event) {
@@ -42,6 +43,10 @@
             this.Id = event.Id;
             this.txtName = event.Name;
             this.txtDescription = event.Description;
+        }, CleanForm: function(event) {
+            this.Id = 0;
+            this.txtName = '';
+            this.txtDescription = '';
         }
         
     }, mounted() {

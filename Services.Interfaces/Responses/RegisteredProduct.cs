@@ -12,7 +12,7 @@ namespace Services.Interfaces.Responses
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
-
         public string categoryName { get; set; }
+        public DateTime CreateDate { get; set; }
     }
 }
