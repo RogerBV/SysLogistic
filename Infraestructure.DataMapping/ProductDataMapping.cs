@@ -29,10 +29,11 @@ namespace Infraestructure.DataMapping
                 , Name = productOnDb.Name
                 , Description = productOnDb.Description
                 , Price = productOnDb.Price
+                , CategoryId = productOnDb.Category != null ? productOnDb.Category.Id : 0
                 , categoryName = productOnDb.Category != null ? productOnDb.Category.Name : ""
             };
         }
-        public static Product ToEntity(this UpdateCategory updateProduct)
+        public static Product ToEntity(this UpdateProduct updateProduct)
         {
             return new Product()
             {

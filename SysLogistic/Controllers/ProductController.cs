@@ -41,7 +41,6 @@ namespace SysLogistic.Controllers
         public ActionResult ListCategories()
         {
             List<RegisteredCategory> list = this._categoryService.List();
-
             return Json(new { count = list.Count, data = list }, JsonRequestBehavior.AllowGet);
         }
 
@@ -53,3 +52,58 @@ namespace SysLogistic.Controllers
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -13,12 +13,16 @@
                 this.UpdateCategory(event);
             }
         },
+        OpenCategory: function (event) {
+            this.ClearForm();
+            $("#modalCategory").modal('show');
+        },
         SaveCategory: function (event) {
             axios.post("/Category/create", { Description: this.txtDescription, Name: this.txtName })
                 .then(response => {
                     $('#modalCategory').modal('hide');
                     this.List();
-                    this.CleanForm();
+                    this.ClearForm();
                 });
         }
         , UpdateCategory: function (event) {
@@ -26,7 +30,7 @@
                 .then(response => {
                     $('#modalCategory').modal('hide');
                     this.List();
-                    this.CleanForm();
+                    this.ClearForm();
 
                 });
         }
@@ -43,10 +47,12 @@
             this.Id = event.Id;
             this.txtName = event.Name;
             this.txtDescription = event.Description;
-        }, CleanForm: function(event) {
+        }, ClearForm: function(event) {
             this.Id = 0;
-            this.txtName = '';
-            this.txtDescription = '';
+            //$("#txtName").value = "";
+            //$("#txtDescription").value = "";
+            this.txtName = "";
+            this.txtDescription = "";
         }
         
     }, mounted() {

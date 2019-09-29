@@ -39,7 +39,14 @@ namespace Services.Implementation.SQL
 
         public RegisteredProduct Update(UpdateProduct updateRegistry)
         {
-            throw new NotImplementedException();
+            using (LogisticDataContext logisticDataContext = new LogisticDataContext())
+            {
+                var productToEntity = updateRegistry.ToEntity();
+                logisticDataContext.Products.Attach(productToEntity);
+                logisticDataContext.Entry(productToEntity).State = System.Data.Entity.EntityState.Modified;
+                logisticDataContext.SaveChanges();
+                return productToEntity.toDTO();
+            }
         }
     }
 }

@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-11">
-                <input type="button" value="New" class="btn btn-primary" data-toggle="modal" data-target="#modalProduct" />
+                <input type="button" value="New" class="btn btn-primary" v-on:click="OpenProduct"/>
             </div>
         </div>
         <div class="row">
@@ -20,14 +20,16 @@
                             <th>Name</th>
                             <th>Category</th>
                             <th>Price</th>
+                            <th class="invisible">CategoryId</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="product in products">
+                        <tr v-for="product in products" v-on:click="FindProduct( product )">
                             <td>{{product.Id}}</td>
                             <td>{{product.Name}}</td>
                             <td>{{product.categoryName}}</td>
                             <td>{{product.Price}}</td>
+                            <td class="invisible">{{product.CategoryId}}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -50,8 +52,9 @@
                         <input type="text" class="form-control" v-model="txtDescription" id="txtDescription" name="txtDescription" />
                         <label for="cboCategory">Category</label>
                         <select class="form-control" id="cboCategory" name="cboCategory" v-model="cboCategory" >
-                            <option>Select here</option>
+                            
                             <option v-for="category in categories"
+                                    selected="{{cboCategory == CategoryId}}"
                                     v-bind:value="category.Id"
                                     >{{category.Name}}</option>
                         </select>

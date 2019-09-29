@@ -9,12 +9,16 @@
         categories: [],
         products: []
     }, methods: {
-            ClearForm: function(event) {
-                this.txtName = '';
-                this.txtDescription = '';
-                this.cboCategory = '';
+            ClearForm: function (event) {
+                this.Id = 0;
+                this.txtName = "";
+                this.txtDescription = "";
+                this.cboCategory = "";
             },
-     
+            OpenProduct: function (event) {
+                this.ClearForm();
+                $("#modalProduct").modal("show");
+            },
             List: function (event) {
                 axios.get('/Product/List', {
                     dataType: 'json'
@@ -40,7 +44,18 @@
                         $("#modalProduct").modal('hide');
                         this.List();
                         this.ClearForm();
-                    })
+                    });
+            },
+            FindProduct: function (event) {
+                $("#modalProduct").modal('show');
+                this.MappingEntityForm(event);
+            },
+            MappingEntityForm: function (event) {
+                this.Id = event.Id;
+                this.txtName = event.Name;
+                this.txtDescription = event.Description;
+                this.txtPrice = event.Price;
+                this.cboCategory = event.CategoryId;
             },
             Save: function (event) {
                 if (this.Id == 0) {
