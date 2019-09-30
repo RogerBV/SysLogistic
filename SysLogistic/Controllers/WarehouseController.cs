@@ -28,6 +28,12 @@ namespace SysLogistic.Controllers
             newWarehouse.CreationDate = DateTime.Now;
             return this._warehouseService.Create(newWarehouse);
         }
+        [HttpPost]
+        public RegisteredWarehouse Update(UpdatedWarehouse updatedWarehouse)
+        {
+            updatedWarehouse.CreateDate = DateTime.Now;
+            return this._warehouseService.Update(updatedWarehouse);
+        }
 
         [HttpGet]
         public ActionResult List()

@@ -38,7 +38,14 @@ namespace Services.Implementation.SQL
 
         public RegisteredWarehouse Update(UpdatedWarehouse updateRegistry)
         {
-            throw new NotImplementedException();
+            using (LogisticDataContext logisticDataContext = new LogisticDataContext())
+            {
+                var wareHouseEntity = updateRegistry.ToEntity();
+                logisticDataContext.Warehouses.Attach(wareHouseEntity);
+                logisticDataContext.Entry(wareHouseEntity).State = System.Data.Entity.EntityState.Modified;
+                logisticDataContext.SaveChanges();
+                return wareHouseEntity.toDTO();
+            }
         }
     }
 }

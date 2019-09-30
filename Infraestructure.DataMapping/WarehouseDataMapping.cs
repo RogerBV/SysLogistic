@@ -32,5 +32,15 @@ namespace Infraestructure.DataMapping
                 ,Latitude = warehouseOnDb.Latitude
             };
         }
+        public static Warehouse ToEntity(this UpdatedWarehouse updatedWarehouse)
+        {
+            return new Warehouse()
+            {
+                Id = updatedWarehouse.Id
+                ,Name = updatedWarehouse.Name
+                ,Description = updatedWarehouse.Description
+                ,CreationDate = updatedWarehouse.CreateDate
+            };
+        }
     }
 }

@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-11">
-                <input type="button" value="New" class="btn btn-primary" data-toggle="modal" data-target="#modalWarehouse" />
+                <input type="button" value="New" class="btn btn-primary" v-on:click="OpenWarehouse" />
             </div>
 
         </div>
@@ -24,7 +24,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="row in Warehouses">
+                        <tr v-for="row in Warehouses" v-on:click="FindWarehouse( row )">
                             <td> {{row.Id}} </td>
                             <td> {{row.Name}} </td>
                             <td> {{row.Description}} </td>
@@ -51,7 +51,7 @@
                         <input type="text" class="form-control" v-model="txtDescription" id="txtDescription" name="txtDescription" />
                     </div>
                     <div class="modal-footer">
-                        <button id="btnSave" name="btnSave" class="btn btn-primary" v-on:click="SaveWarehouse">Save</button>
+                        <button id="btnSave" name="btnSave" class="btn btn-primary" v-on:click="Save">Save</button>
                     </div>
                 </div>
             </div>
