@@ -1,0 +1,57 @@
+﻿<html>
+<head>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</head>
+<body>
+    <div id="appMovement">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-9">
+                <label>Type</label>
+                <select id="cboMovementType" v-model="cboMovementType" class="form-control">
+                    <option value="0">Seleccione...</option>
+                    <option v-for="movementType in movementTypes" v-bind:value="movementType.Id">{{movementType.Name}}</option>
+                </select>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <label for="cboProduct">Product</label>
+                <select id="cboProduct" v-model="cboProduct" class="form-control">
+                    <option value="0">Seleccione...</option>
+                    <option v-for="product in products" v-bind:value="{id : product.Id, text : product.Name}">{{product.Name}}</option>
+                </select>
+               <label>{{cboProduct.Text}}</label>
+                <label for="txtCount">Count</label>
+                <input type="text" class="form-control" id="txtCount" v-model="txtCount" />
+                
+                <button class="btn btn-primary" v-on:click="AddProduct">Add Product</button>
+            </div>
+            <div class="col-md-9">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ProductId</th>
+                            <th>Product</th>
+                            <th>Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="detail in listDetails">
+                            <td>{{detail.ProductId}}</td>
+                            <td>{{detail.ProductName}}</td>
+                            <td>{{detail.Count}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/Vue/vue.js"></script>
+    <script src="~/Scripts/Vue/axios.js"></script>
+    <script src="~/Scripts/Vue/Movement.js"></script>
+</body>
+</html>

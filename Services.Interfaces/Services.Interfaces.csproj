@@ -50,19 +50,31 @@
   <ItemGroup>
     <Compile Include="Declarations\Common\ICRUDService.cs" />
     <Compile Include="Declarations\ICategoryService.cs" />
+    <Compile Include="Declarations\IMovementService.cs" />
+    <Compile Include="Declarations\IMovementTypeService.cs" />
     <Compile Include="Declarations\IProductService.cs" />
     <Compile Include="Declarations\IWarehouseService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requests\CreateCategory.cs" />
+    <Compile Include="Requests\CreateMovement.cs" />
+    <Compile Include="Requests\CreateMovementDetail.cs" />
+    <Compile Include="Requests\CreateMovementType.cs" />
     <Compile Include="Requests\CreateProduct.cs" />
     <Compile Include="Requests\CreateWarehouse.cs" />
     <Compile Include="Requests\DeletedCategory.cs" />
+    <Compile Include="Requests\DeletedMovement.cs" />
+    <Compile Include="Requests\DeletedMovementType.cs" />
     <Compile Include="Requests\DeletedProduct.cs" />
     <Compile Include="Requests\DeletedWarehouse.cs" />
     <Compile Include="Requests\UpdateCategory.cs" />
     <Compile Include="Requests\UpdatedWarehouse.cs" />
+    <Compile Include="Requests\UpdateMovement.cs" />
+    <Compile Include="Requests\UpdateMovementType.cs" />
     <Compile Include="Requests\UpdateProduct.cs" />
     <Compile Include="Responses\RegisteredCategory.cs" />
+    <Compile Include="Responses\RegisteredMovement.cs" />
+    <Compile Include="Responses\RegisteredMovementDetail.cs" />
+    <Compile Include="Responses\RegisteredMovementType.cs" />
     <Compile Include="Responses\RegisteredProduct.cs" />
     <Compile Include="Responses\RegisteredWarehouse.cs" />
   </ItemGroup>

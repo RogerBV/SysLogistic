@@ -13,6 +13,9 @@ namespace Infraestructure.SQLERepository
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Warehouse> Warehouses { get; set; }
+        public DbSet<MovementType> MovementTypes { get; set; }
+        public DbSet<Movement> Movements { get; set; }
+        public DbSet<MovementDetail> MovementDetails { get; set; }
 
         public LogisticDataContext() : base(DatabaseConnectionStringName)
         {

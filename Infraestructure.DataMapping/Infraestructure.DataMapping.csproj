@@ -49,8 +49,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoryDataMapping.cs" />
+    <Compile Include="MovementDataMapping.cs" />
+    <Compile Include="MovementDetailDataMapping.cs" />
     <Compile Include="ProductDataMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MovementTypeMapping.cs" />
     <Compile Include="WarehouseDataMapping.cs" />
   </ItemGroup>
   <ItemGroup>

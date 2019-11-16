@@ -49,6 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoryServiceSQL.cs" />
+    <Compile Include="MovementServiceSQL.cs" />
+    <Compile Include="MovementTypeServiceSQL.cs" />
     <Compile Include="ProductServiceSQL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WarehouseServiceSQL.cs" />
