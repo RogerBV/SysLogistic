@@ -9,12 +9,28 @@
         <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-9">
-                <label>Type</label>
-                <select id="cboMovementType" v-model="cboMovementType" class="form-control">
-                    <option value="0">Seleccione...</option>
-                    <option v-for="movementType in movementTypes" v-bind:value="movementType.Id">{{movementType.Name}}</option>
-                </select>
-                
+                <div class="col-md-2">
+                    <label for="cboMovementType">Type</label>
+                    <select id="cboMovementType" v-model="cboMovementType" class="form-control">
+                        <option value="0">Seleccione...</option>
+                        <option v-for="movementType in movementTypes" v-bind:value="movementType.Id">{{movementType.Name}}</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label>Warehouse</label>
+                    <select id="cboWarehouse" class="form-control" v-model="cboWarehouse">
+                        <option value="0">Seleccione...</option>
+                        <option v-for="warehouse in warehouses" v-bind:value="warehouse.Id">{{warehouse.Name}}</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="txtDate">Date</label>
+                    <input type="date" class="form-control" id="txtDate" v-model="txtDate" />
+                </div>
+                <div class="col-md-2">
+                    <label></label>
+                    <button class="btn btn-primary" v-on:click="CreateMovement">Register Movement</button>
+                </div>
             </div>
         </div>
         <div class="row">

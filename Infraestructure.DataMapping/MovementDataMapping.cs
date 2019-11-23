@@ -17,6 +17,7 @@ namespace Infraestructure.DataMapping
                 MovementDate = createMovement.MovementDate
                 ,WarehouseId = createMovement.WarehouseId
                 ,MovementTypeId = createMovement.MovementTypeId
+                ,CreationDate = DateTime.Now
                 ,Details = createMovement.ListDetails.ToList().Select( x => x.ToEntity() ).ToList()
             };
         }

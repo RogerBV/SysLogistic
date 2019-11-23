@@ -35,6 +35,7 @@ namespace Services.Implementation.SQL
                 return logisticDataContext.Movements.ToList().Select(x => x.ToDTO()).ToList();
             }
         }
+       
 
         public RegisteredMovement Update(UpdateMovement updateRegistry)
         {

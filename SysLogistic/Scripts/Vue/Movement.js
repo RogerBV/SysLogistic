@@ -3,12 +3,28 @@
     , data: {
         movementTypes: [],
         products: [],
+        warehouses:[],
         cboMovementType:'0',
         cboProduct: '0',
-        txtCount: '',
+        cboWarehouse:'0',
+        txtCount: '0',
+        txtDate:'',
         listDetails:[]
     }
     , methods: {
+        CreateMovement: function (event)
+        {
+            axios.post('/Movement/Create', { ListDetails: this.listDetails, MovementTypeId: this.cboMovementType, WarehouseId: this.cboWarehouse, MovementDate: this.txtDate })
+                .then(response => {
+
+                })
+        },
+        ListWarehouses: function (event) {
+            axios.get('/Movement/ListWarehouses', { dataType: 'json' })
+                .then(response => {
+                    this.warehouses = response.data.data
+                });
+        },
         AddProduct: function (event) {
             const detail = {
                 ProductName:'',
@@ -37,6 +53,7 @@
         
     }
     , mounted() {
+        this.ListWarehouses();
         this.ListProducts();
         this.ListMovemenTypes();
     }
