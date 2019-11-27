@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29102.190
+# Visual Studio 15
+VisualStudioVersion = 15.0.28107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SysLogistic", "SysLogistic\SysLogistic.csproj", "{F2D168A7-C2F4-43D5-A9C8-1CEB1810682B}"
 EndProject
@@ -22,6 +22,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Implementation.SQL", "Services.Implementation.SQL\Services.Implementation.SQL.csproj", "{49D76D28-C1FB-4560-B6E5-5255590E7DC1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{8593C85A-AAE5-43DF-AAEA-E8FF04F0E303}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APISysLogistic", "APISysLogistic\APISysLogistic.csproj", "{B77585E5-CE2F-4B52-BB13-7FE513C76901}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{49D76D28-C1FB-4560-B6E5-5255590E7DC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49D76D28-C1FB-4560-B6E5-5255590E7DC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49D76D28-C1FB-4560-B6E5-5255590E7DC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B77585E5-CE2F-4B52-BB13-7FE513C76901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B77585E5-CE2F-4B52-BB13-7FE513C76901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B77585E5-CE2F-4B52-BB13-7FE513C76901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B77585E5-CE2F-4B52-BB13-7FE513C76901}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{7D3FC3C7-83FC-4ED9-9FED-74A5EF407467} = {42A3EB2F-99C1-4629-AAD3-2736CE99B6FE}
 		{56856D59-92B5-460F-A5CC-DCE449E31726} = {42A3EB2F-99C1-4629-AAD3-2736CE99B6FE}
 		{49D76D28-C1FB-4560-B6E5-5255590E7DC1} = {82E998B5-997D-450E-9F39-AB48CCD464D7}
+		{B77585E5-CE2F-4B52-BB13-7FE513C76901} = {8593C85A-AAE5-43DF-AAEA-E8FF04F0E303}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {840FA385-BD76-4F5B-B22D-1959CDED161B}
