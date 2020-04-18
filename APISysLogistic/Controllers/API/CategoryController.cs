@@ -19,9 +19,10 @@ namespace APISysLogistic.Controllers.API
         }
 
         [HttpGet]
-        public List<RegisteredCategory> List()
+        public IHttpActionResult List()
         {
-            return this._categoryService.List();
+            return Ok(new { lstCategories = this._categoryService.List() });
+
         }
     }
 }

@@ -22,9 +22,21 @@ namespace APISysLogistic.Controllers.API
         }
 
         [HttpGet]
-        public List<RegisteredProduct> List()
+        public IHttpActionResult List()
         {
-            return this._productService.List();
+            return Ok(new { lstRegisteredProducts = this._productService.List() });
+        }
+
+        [HttpPost]
+        public RegisteredProduct Create(string Name,string Description,  decimal Price,int CategoryId)
+        {
+            CreateProduct createProduct = new CreateProduct();
+            createProduct.Name = Name;
+            createProduct.Description = Description;
+            createProduct.Price = Price;
+            createProduct.CategoryId = CategoryId;
+            createProduct.CreationDate = DateTime.Now;
+            return this._productService.Create(createProduct);
         }
     }
 }

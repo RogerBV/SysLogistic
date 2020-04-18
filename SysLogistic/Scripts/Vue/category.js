@@ -18,7 +18,7 @@
             $("#modalCategory").modal('show');
         },
         SaveCategory: function (event) {
-            axios.post("/Category/create", { Description: this.txtDescription, Name: this.txtName })
+            axios.post("/SysLogistic/Category/create", { Name: this.txtName, Description: this.txtDescription })
                 .then(response => {
                     $('#modalCategory').modal('hide');
                     this.List();
@@ -35,7 +35,7 @@
                 });
         }
         , List: function (event) {
-            axios.get("/Category/List",
+            axios.get("/Syslogistic/Category/List",
                 {
                     dataType: 'json'
                 })

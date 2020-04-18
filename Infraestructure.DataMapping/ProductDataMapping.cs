@@ -30,7 +30,7 @@ namespace Infraestructure.DataMapping
                 , Description = productOnDb.Description
                 , Price = productOnDb.Price
                 , CategoryId = productOnDb.Category != null ? productOnDb.Category.Id : 0
-                , categoryName = productOnDb.Category != null ? productOnDb.Category.Name : ""
+                , CategoryName = productOnDb.Category != null ? productOnDb.Category.Name : ""
             };
         }
         public static Product ToEntity(this UpdateProduct updateProduct)
