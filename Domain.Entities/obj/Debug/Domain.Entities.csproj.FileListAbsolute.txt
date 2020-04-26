@@ -8,3 +8,4 @@ C:\Users\roger\source\repos\SysLogistic\Domain.Entities\bin\Debug\EntityFramewor
 C:\Users\roger\source\repos\SysLogistic\Domain.Entities\obj\Debug\Domain.Entities.csproj.CopyComplete
 C:\Users\roger\source\repos\SysLogistic\Domain.Entities\obj\Debug\Domain.Entities.dll
 C:\Users\roger\source\repos\SysLogistic\Domain.Entities\obj\Debug\Domain.Entities.pdb
+C:\Users\roger\source\repos\SysLogistic\Domain.Entities\obj\Debug\Domain.Entities.csprojAssemblyReference.cache
